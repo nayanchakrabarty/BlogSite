@@ -30,7 +30,7 @@
         @if(session('message'))
             {{ session('message') }}
         @endif
-        <form class="login-form" action="#" method="post">
+        <form class="login-form" action="{{ route('user.login') }}" method="post">
             @csrf
             <input name="email" type="email" value="{{ old('email') }}" placeholder="Email" />
             <input name="password" type="password" placeholder="password" />
