@@ -22,6 +22,7 @@ Route::middleware('auth')->group(function (){
     Route::get('dashboard', 'DashboardController@index')->name('dashboard');
     Route::get('profile', 'UserController@index')->name('user.profile');
     Route::resource('author', 'AuthorController');
+    Route::resource('category', 'CategoryController');
 });
 
 Route::get('logout',function (){
