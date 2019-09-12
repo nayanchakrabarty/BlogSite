@@ -66,6 +66,7 @@
         <!-- Container fluid  -->
         <!-- ============================================================== -->
         <div class="container-fluid">
+            @include('layouts.backend._messages')
             @yield('content')
         </div>
         <!-- ============================================================== -->
