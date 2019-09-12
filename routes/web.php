@@ -16,5 +16,6 @@ Route::get('/', function () {
 });
 
 Route::get('login', 'LoginController@loginForm')->name('user.login.form');
+Route::post('login', 'LoginController@login')->name('user.login');
 Route::get('dashboard', 'DashboardController@index')->name('dashboard');
 Route::get('profile', 'UserController@index')->name('user.profile');
