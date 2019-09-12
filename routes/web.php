@@ -23,6 +23,7 @@ Route::middleware('auth')->group(function (){
     Route::get('profile', 'UserController@index')->name('user.profile');
     Route::resource('author', 'AuthorController');
     Route::resource('category', 'CategoryController');
+    Route::resource('post', 'PostController');
 });
 
 Route::get('logout',function (){
