@@ -11,14 +11,18 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
+
+Route::get('/', 'HomeController@index')->name('home');
+Route::get('post-details/{id}', 'HomeController@post_details')->name('post.details');
+Route::get('category/{id}', 'HomeController@category_posts')->name('category.posts');
 
 Route::get('login', 'LoginController@loginForm')->name('user.login.form');
 Route::post('login', 'LoginController@login')->name('user.login');
 
-Route::middleware('auth')->group(function (){
+Route::middleware('auth')->prefix('admin')->group(function (){
     Route::get('dashboard', 'DashboardController@index')->name('dashboard');
     Route::get('profile', 'UserController@index')->name('user.profile');
     Route::resource('author', 'AuthorController');
