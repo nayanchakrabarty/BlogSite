@@ -1,7 +1,7 @@
 @extends('layouts.front.master')
 @section('content')
     <!-- Section Title -->
-    {<div class="section-title text-center">
+    <div class="section-title text-center">
         <h2>Featured Post</h2>
     </div>
     <!-- Section Title -->
